@@ -1,0 +1,32 @@
+{
+    "name": "@patlaf/pnpm-ts-duck-typing-issue-lib-2",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
+        }
+    },
+    "files": [
+        "/dist"
+    ],
+    "scripts": {
+        "build": "tsup --config ./tsup.build.ts",
+        "publish-pkg": "pnpm build && pnpm publish"
+    },
+    "peerDependencies": {
+        "@patlaf/pnpm-ts-duck-typing-issue-lib-1": "*"
+    },
+    "devDependencies": {
+        "@patlaf/pnpm-ts-duck-typing-issue-lib-1": "1.0.0",
+        "@workleap/tsup-configs": "3.0.6",
+        "@workleap/typescript-configs": "3.0.2",
+        "tsup": "8.3.5",
+        "typescript": "5.5.4"
+    }
+}

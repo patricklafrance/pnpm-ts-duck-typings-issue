@@ -1,0 +1,8 @@
+node_modules
+dist
+.pnpm-debug.log*
+.deploy
+
+# Mac
+.DS_Store
+*.pem

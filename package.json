@@ -1,0 +1,23 @@
+{
+    "name": "pnpm-ts-duck-typings-issue",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build-lib-1": "pnpm --filter=@patlaf/pnpm-ts-duck-typing-issue-lib-1 build",
+        "publish-lib-1": "pnpm --filter=@patlaf/pnpm-ts-duck-typing-issue-lib-1 publish-pkg",
+        "build-lib-2": "pnpm --filter=@patlaf/pnpm-ts-duck-typing-issue-lib-2 build",
+        "publish-lib-2": "pnpm --filter=@patlaf/pnpm-ts-duck-typing-issue-lib-2 publish-pkg",
+        "build-consumer-lib": "pnpm --filter=consumer-lib build",
+        "clean": "pnpm -r --parallel --include-workspace-root exec pnpm dlx rimraf dist .turbo .netlify node_modules/.cache",
+        "reset": "pnpm clean && pnpm reset:modules",
+        "reset:modules": "pnpm -r --parallel --include-workspace-root exec pnpm dlx rimraf node_modules pnpm-lock.yaml",
+        "list-outdated-deps": "pnpm outdated -r --format list",
+        "update-outdated-deps": "pnpm update -r --latest"
+    },
+    "devDependencies": {
+        "@workleap/typescript-configs": "3.0.2",
+        "typescript": "5.6.3"
+    },
+    "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
+}
