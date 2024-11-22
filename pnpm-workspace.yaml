@@ -1,4 +1,5 @@
 packages:
+  - "app"
   - "consumer-lib"
   - "lib-1"
   - "lib-2"
